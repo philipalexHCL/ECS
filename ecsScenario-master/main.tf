@@ -125,7 +125,7 @@ resource "aws_lb_target_group" "ecs_tg" {
 
 
 
-
+/*
 resource "aws_ecs_task_definition" "wordpress-tdN" {
   family                   = "wordpress-tdN"
   requires_compatibilities = ["FARGATE"]
@@ -178,7 +178,7 @@ TASK_DEFINITION
 
 
   
-}
+}*/
 
 # for creating DB subnet grps
 

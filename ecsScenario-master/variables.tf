@@ -9,7 +9,3 @@ variable "AWSAccount" {
   type        = number
 }
 
-variable "RDSsecret" {
-  description = "RDS Secret ARN"
-  type        = string
-}
