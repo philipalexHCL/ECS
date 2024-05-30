@@ -36,15 +36,19 @@ resource "aws_iam_role_policy" "AccessSecretsAndParameters_policy" {
         Action = [
           "secretsmanager:GetSecretValue",
         ]
-        Effect   = "Allow"
-        Resource = "arn:aws:secretsmanager:us-east-1:${var.AWSAccount}:secret:rds*"
+        Resource = [
+		   "arn:aws:secretsmanager:us-east-1:${var.AWSAccount}:secret:rds*"
+		]
+		Effect   = "Allow"
       },
 	  {
         Action = [
           "ssm:GetParameters",
         ]
-        Effect   = "Allow"
-        Resource = "arn:aws:ssm:us-east-1:${var.AWSAccount}:parameter/dev/*"
+        Resource = [
+		   "arn:aws:ssm:us-east-1:${var.AWSAccount}:parameter/dev/*"
+		]
+		Effect   = "Allow"
       },
     ]
   })
@@ -99,15 +103,19 @@ resource "aws_iam_role_policy" "AccessSecretsAndParameter_policy" {
         Action = [
           "secretsmanager:GetSecretValue",
         ]
-        Effect   = "Allow"
-        Resource = "arn:aws:secretsmanager:us-east-1:${var.AWSAccount}:secret:rds*"
+        Resource = [
+		   "arn:aws:secretsmanager:us-east-1:${var.AWSAccount}:secret:rds*"
+		]
+		Effect   = "Allow"
       },
 	  {
         Action = [
           "ssm:GetParameters",
         ]
-        Effect   = "Allow"
-        Resource = "arn:aws:ssm:us-east-1:${var.AWSAccount}:parameter/dev/*"
+        Resource = [
+		   "arn:aws:ssm:us-east-1:${var.AWSAccount}:parameter/dev/*"
+		]
+		Effect   = "Allow"
       },
     ]
   })
